@@ -10,7 +10,7 @@ import Dashboard from './Dashboard';
 import TaskForm from './TaskForm';
 
 // Set base URL for axios
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'https://task-manager-pifr.onrender.com';
 
 const App = () => {
   const [user, setUser] = useState(null);
