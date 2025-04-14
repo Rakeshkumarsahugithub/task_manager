@@ -50,7 +50,7 @@ const Register = ({ register }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              placeholder="John Doe"
+              placeholder="Rakesh Kumar Sahu"
               style={{ paddingLeft: '40px' }}
             />
           </div>
