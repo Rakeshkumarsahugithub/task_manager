@@ -17,7 +17,7 @@ const Register = ({ register }) => {
     setLoading(false);
     
     if (result.success) {
-      navigate('/login');
+      navigate('/');
     } else {
       setError(result.error);
     }
@@ -109,7 +109,7 @@ const Register = ({ register }) => {
           disabled={loading}
         >
           <FiArrowRight style={{ marginRight: '8px' }} />
-          {loading ? 'Creating Account...' : 'Register'}
+          {loading ? 'Creating Account Please wait...' : 'Register'}
         </button>
       </form>
       
