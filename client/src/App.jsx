@@ -71,7 +71,7 @@ const App = () => {
       <div className="app-container">
         <Routes>
           <Route path="/login" element={!user ? <Login login={login} /> : <Navigate to="/" />} />
-          <Route path="/register" element={!user ? <Register register={register} /> : <Navigate to="/" />} />
+          <Route path="/register" element={!user ? <Register register={register} /> : <Navigate to="/login" />} />
           <Route
             path="/"
             element={user ? <Dashboard logout={logout} /> : <Navigate to="/login" />}
