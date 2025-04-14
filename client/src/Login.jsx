@@ -85,7 +85,7 @@ const Login = ({ login }) => {
           disabled={loading}
         >
           <FiLogIn style={{ marginRight: '8px' }} />
-          {loading ? 'Signing In...' : 'Sign In'}
+          {loading ? 'Signing In Please Wait...' : 'Sign In'}
         </button>
       </form>
       
