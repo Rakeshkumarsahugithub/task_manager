@@ -42,7 +42,7 @@
   /* Form Styles */
   .form-container {
     width: 100%;
-    max-width: 500px; /* wider form on desktop */
+    max-width: 400px; /* wider form on desktop */
     margin: 3rem auto;
     padding: 3rem;
     background: var(--glass, rgba(255, 255, 255, 0.8)); /* fallback if --glass not defined */
