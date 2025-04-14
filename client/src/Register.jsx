@@ -17,7 +17,7 @@ const Register = ({ register }) => {
     setLoading(false);
     
     if (result.success) {
-      navigate('/');
+      navigate('/login');
     } else {
       setError(result.error);
     }
