@@ -68,7 +68,7 @@ app.post('/api/register', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = new User({ name, email, password: hashedPassword });
     await user.save();
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.status(201).send({ user: { _id: user._id, name: user.name, email: user.email }, token });
   } catch (err) {
     res.status(400).send({ error: err.message });
@@ -83,7 +83,7 @@ app.post('/api/login', async (req, res) => {
     if (!user) throw new Error('Invalid credentials');
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) throw new Error('Invalid credentials');
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     res.send({ user: { _id: user._id, name: user.name, email: user.email }, token });
   } catch (err) {
     res.status(400).send({ error: err.message });
