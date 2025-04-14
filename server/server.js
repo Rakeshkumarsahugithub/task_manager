@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 // Enhanced CORS configuration
 const corsOptions = {
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5173', 'https://taskmanager-vb8h.onrender.com'],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
